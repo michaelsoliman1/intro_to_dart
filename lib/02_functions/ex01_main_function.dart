@@ -3,4 +3,6 @@
 // The main() function returns void and has an optional List<String> parameter for arguments.
 //
 // This is where the app starts executing.
-void main() {}
+void main() {
+  print("Hello, World");
+}
