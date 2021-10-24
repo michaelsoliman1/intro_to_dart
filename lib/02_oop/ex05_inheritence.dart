@@ -27,7 +27,7 @@ void main() {
   var dog = Dog();
   var cat = Cat();
 
-  animal.talk();
-  dog.talk();
-  cat.talk();
+  animal.talk(); // I'm an animal
+  dog.talk(); // Haww
+  cat.talk(); // Meow
 }
