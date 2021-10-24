@@ -10,13 +10,21 @@
 // This makes the ! operator unsafe, so don’t use it unless you’re very sure
 // that the expression isn’t null.
 
+int? couldReturnNullButDoesnt() => -3;
+
 void main() {
-  // int? couldBeNullButIsnt = 1;
-  // List<int?> listThatCouldHoldNulls = [2, null, 4];
+  // try removing the ! in each line and see what happens
 
-  // int a = couldBeNullButIsnt;
-  // int b = listThatCouldHoldNulls.first; // first item in the list
+  int? couldBeNullButIsnt = 1;
+  List<int?> listThatCouldHoldNulls = [2, null, 4];
 
-  // print('a is $a.');
-  // print('b is $b.');
+  int a = couldBeNullButIsnt;
+  // add (!) at the end to tell the compiler that first is not null
+  int b = listThatCouldHoldNulls.first!; // first item in the list
+
+  int c = couldReturnNullButDoesnt()!.abs();
+
+  print('a is $a.');
+  print('b is $b.');
+  print('c is $c.');
 }
