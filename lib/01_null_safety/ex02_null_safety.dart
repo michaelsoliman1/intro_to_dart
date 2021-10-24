@@ -4,7 +4,7 @@
 
 void main() {
   // In null-safe Dart, someInt can ever be null.
-  int someInt = 42; // Inferred to be an int.
+  var someInt = 42; // Inferred to be an int.
   // someInt = null // ERROR
 
   // To indicate that a variable might have the value null, just add ? to its type declaration:

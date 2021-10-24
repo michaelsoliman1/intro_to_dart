@@ -8,13 +8,12 @@ void main() {
   // declare a double value, can hold only floating point values
   double aDouble = 1.5;
 
-  // use when you don't know the type of string
+  // use when you don't know whether the string contains a double or an int
   num a1 = num.parse("1.1"); // a1 = 1.1
 
   int b1 = int.parse("2"); // b1  = 2
   // int b2 = int.parse("2.2"); // ERROR. cannot parse a string double using int
 
-  // c1 is of type [double]
   double c1 = double.parse("2.34"); // c1 = 2.34
   double c2 = double.parse("2"); // Valid. c2 = 2.0 (with .0 because it's a double)
 
@@ -26,6 +25,12 @@ void main() {
 
   // does the same,
   String ConcatenatedString2 = str1 + " " + str2; // 'Coding is Fun'
+
+  // declare a fixed list with .filled constructor, cannot change it size
+  var fixedLengthList = List<int>.filled(5, 0);
+  fixedLengthList.length = 0; // Error
+  fixedLengthList.add(499); // Error
+  fixedLengthList[0] = 87;
 
   var growableList = [1, 2];
   growableList.add(499); // [1, 2, 499]
@@ -45,7 +50,7 @@ void main() {
   // add an entry to the map
   anotherMap["myKey"] = 10;
 
-  // or using addEntries method, note it take a list of [MapEntry]
+  // or using addEntries method, note it takes a list of MapEntry
   anotherMap.addEntries([MapEntry("anotherKey", 20)]);
 
   //

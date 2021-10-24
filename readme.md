@@ -175,10 +175,9 @@ anotherSet.add(20);
 anotherSet.add(60);
 print("Default implementation :${anotherSet.runtimeType}"); // _CompactLinkedHashSet<int>
 
-
 // all elements are retrieved in the order in which they are inserted
-for (var element in anotherSet) {
-  print(element);
+for (var setElement in anotherSet) {
+  print(setElement);
 } // 100, 20, 60
 ```
 
